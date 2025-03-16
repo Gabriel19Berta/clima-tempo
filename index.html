@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <title>Clima Tempo</title>
+</head>
+<body>
+    <div class="card-clima">
+        <form id="pesquisa">
+            <i class="fa-solid fa-map-location-dot icon-location"></i>
+            <input type="search" name="pesquisar_cidade" id="pesquisar_cidade" class="pesquisa_cidade" placeholder="Buscar cidade">
+            <button type="submit" class="btn-pesquisar">
+                <i class="fa-solid fa-magnifying-glass icon-search"></i>
+            </button>
+        </form>
+
+        <div class="clima">
+            <h1 id="nome_cidade" class="nome_cidade"></h1>
+
+            <div id="infos">
+                <div class="temp">
+                    <img src="" alt="imagem do tempo" id="img-temp" class="img-temp">
+                    <div class="contain_valor_graus">
+                        <p id="valor_graus" class="valor_graus"></p>
+                        <p id="descricao_temp" class="descricao_temp"></p>
+                    </div>
+                </div>
+                <div class="temp_max_min">
+                    <div class="contain_temp_max">
+                        <i class="fa-solid fa-temperature-arrow-up icon_temp_max"></i>
+                        <div>
+                            <p>Temp. max</p>
+                            <p id="temp_max"></p>
+                        </div>
+                    </div>
+                    <div class="contain_temp_min">
+                        <i class="fa-solid fa-temperature-arrow-down icon_temp_min"></i>
+                        <div>
+                            <p>Temp. min</p>
+                            <p id="temp_min"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
