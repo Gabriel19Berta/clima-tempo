@@ -34,7 +34,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 90%;
     text-align: center;
     background-color: var(--cor-branca);
     border-radius: 15px;
@@ -97,7 +97,7 @@ body {
 }
 
 .valor_graus {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     font-family: var(--font-btn);
 }
