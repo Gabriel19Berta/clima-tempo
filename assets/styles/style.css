@@ -24,8 +24,12 @@
     --font-btn: "Poppins", sans-seri;
 }
 
+html {
+    height: 100%;
+}
+
 body {
-    background-color: var(--cor-azul-escuro);
+    background: linear-gradient(#7289da, #012247);
     font-family: var(--font-principal);
 }
 
@@ -34,12 +38,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 80%;
     text-align: center;
     background-color: var(--cor-branca);
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
     padding: 15px 10px 10px 10px;
+    transition: width 1s;
 }
 
 .clima {
@@ -112,15 +117,15 @@ body {
     font-family: var(--font-titulo);
 }
 
-.temp_max_min {
+.card_mini {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 30px 0 0 5px;
+    margin: 25px 0 0 5px;
     font-family: var(--font-btn);
 }
 
-.icon_temp_max, .icon_temp_min {
+.icon {
     font-size: 18px;
 }
 
@@ -132,7 +137,15 @@ body {
     color: #0099ff;
 }
 
-.contain_temp_max, .contain_temp_min {
+.icon-vendo {
+    color: var(--cor-cinza);
+}
+
+.icon-humidade{
+    color: #013b7c;
+}
+
+.card_mini_esquerda, .card_mini_direita {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -145,4 +158,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: start;
+}
+
+@media screen and (min-width: 550px) {
+    .card-clima {
+        width: 350px;
+    }
 }

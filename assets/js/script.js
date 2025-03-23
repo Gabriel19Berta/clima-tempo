@@ -21,7 +21,9 @@ document.getElementById('pesquisa').addEventListener('submit', async (event) => 
                     descricao: json.weather[0].description,
                     tempIcon: json.weather[0].icon,
                     tempMax: json.main.temp_max,
-                    tempMin: json.main.temp_min
+                    tempMin: json.main.temp_min,
+                    vento: json.wind.speed,
+                    humidade: json.main.humidity,
                 })
             } else {
                 alert('Não foi possível localizar')
@@ -37,11 +39,13 @@ function mostrarInfo(json) {
     if (classe && classe.classList.contains('clima')) {
         classe.classList.remove('clima');
     }
-    
+
     document.getElementById('nome_cidade').innerHTML = `${json.cidade}, ${json.estado}`;
     document.getElementById('valor_graus').innerHTML = `${json.temp.toFixed(1).toString().replace('.', ',')} <sup>C°</sup>`;
     document.getElementById('descricao_temp').innerHTML = `${json.descricao}`;
     document.getElementById('img-temp').setAttribute('src', `https://openweathermap.org/img/wn/${json.tempIcon}@2x.png`);
     document.getElementById('temp_max').innerHTML = `${json.tempMax.toFixed(1).toString().replace('.', ',')} <sup>C°</sup>`;
     document.getElementById('temp_min').innerHTML = `${json.tempMin.toFixed(1).toString().replace('.', ',')} <sup>C°</sup>`;
+    document.getElementById('vel_vento').innerHTML = `${json.vento.toFixed(0)} <span>km/h</span>`;
+    document.getElementById('humidade').innerHTML = `${json.humidade} <span>%</span>`;
 }
