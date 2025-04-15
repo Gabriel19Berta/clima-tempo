@@ -38,7 +38,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 90%;
     text-align: center;
     background-color: var(--cor-branca);
     border-radius: 15px;
@@ -70,13 +70,17 @@ body {
     width: 85%;
     padding: 5px;
     font-family: var(--font-btn);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .btn-pesquisar {
     border-radius: 5px;
     background-color: transparent;
     cursor: pointer;
+}
+
+.btn-pesquisar i {
+    font-size: 16px;
 }
 
 .nome_cidade {
@@ -102,13 +106,13 @@ body {
 }
 
 .valor_graus {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     font-family: var(--font-btn);
 }
 
 .valor_graus sup {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .descricao_temp {
@@ -119,10 +123,12 @@ body {
 
 .card_mini {
     display: flex;
+    gap: 5px;
     justify-content: space-around;
     align-items: center;
-    margin: 25px 0 0 5px;
+    margin: 25px 0 0 0;
     font-family: var(--font-btn);
+    width: 100%;
 }
 
 .icon {
@@ -148,9 +154,10 @@ body {
 .card_mini_esquerda, .card_mini_direita {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 15px;
-    border-radius: 20px;
+    gap: 5px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 15px;
     box-shadow: 0 0 10px #00000021;
 }
 
@@ -160,7 +167,7 @@ body {
     align-items: start;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 500px) {
     .card-clima {
         width: 350px;
     }
